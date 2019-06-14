@@ -1,0 +1,20 @@
+********** THIS SHOULD BE A RESPONSIVE PAGE FOR DESKTOP/MOBILE VIEWING  ********
+
+-2 break points. 1 for mobiel and 1 desktop is all that is needed
+-this test is all front-end, since most of our work is front-end developement
+
+Hero Functionality Section
+- The GET PROGRAM INFO form in the hero section does not need to be functional. Just a standard first and last name input field with a continue button. 
+
+FAQ Section
+-The user needs to toggle each question, and collapse and close with the bullet changing on open and close. You can use "lorem ipsum" if need
+
+
+You are free to use any library, or framework that you choose. 
+Please try to do this in SASS styles if you can. 
+
+
+When finished, please upload your source code/ project into GitHub and reply back with the GitHub link. Just make sure the GitHub repository is "public"
+
+If you have any questions feel free to email me at "jtaff@trilogyed.com"  
+

@@ -1,0 +1,19 @@
+.nav {
+	padding-top: 15px;
+	padding-bottom: 15px;
+	height: auto;
+	width: 100%;
+	background-color: rgba(0, 0, 0, 0.65);
+	// position: absolute;
+
+	.logo {
+		background: url('/img/logos/logo_trilogy.svg') no-repeat;
+		flex: 50%;
+		height: 100px;
+		width: auto;
+	}
+	.contact {
+		margin-top: auto;
+		margin-bottom: auto;
+	}
+}

@@ -1,0 +1,319 @@
+{% extends "layout.html" %} {% block header %}
+
+<div class="container">
+  <div class="hero">
+    <div class="row mb-5">
+      <div class="col-md-4">
+        <h1>
+          Learn Coding
+          <div class="br"></div>
+          in 24 weeks
+        </h1>
+        <h4 class="text-left">Class Starts May 15, 2018</h4>
+      </div>
+      <div class="col-md-4 offset-md-4">
+        <h2 class="text-right blue">CODING</h2>
+        <p class="text-right">
+          Coding Boot Camp equps students skills for full-stack web development
+          through dynamic, in-person classes.
+        </p>
+      </div>
+    </div>
+    <div class="row margin-top-md">
+      <div class="col-md-5">
+        <form class="hero-form">
+          <h3 class="text-center black">GET PROGRAM INFO</h3>
+          <p class="black">Step 1 of 3</p>
+          <div class="form-group">
+            <input
+              type="email"
+              class="form-control"
+              id="exampleInputEmail1"
+              aria-describedby="emailHelp"
+              placeholder="First name"
+            />
+          </div>
+          <div class="form-group">
+            <input
+              type="password"
+              class="form-control"
+              id="exampleInputPassword1"
+              placeholder="Last name"
+            />
+          </div>
+          <button type="submit" class="btn btn-primary ">CONTINUE</button>
+        </form>
+      </div>
+
+      <div class="col-md-4 offset-md-3">
+        <h2 class="text-right">Data Analytics</h2>
+        <p class="text-right">
+          Data Boot Camp equips students with the key skills for sull-stack well
+          development through dynamic, in-person classes.
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% endblock %} {% block main %}
+
+<div class="featuring">
+  <div class="container">
+    <h2 class="text-center"><u>Featuring</u></h2>
+    <div class="content my-5">
+      <div class="col-md-4 flex-item text-center">
+        <img
+          class="icon my-3"
+          src="/img/icons/data_coding.svg"
+          alt="data coding"
+        />
+        <p>
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nam
+          consequatur architecto est in alias labore cumque necessitatibus
+          eveniet iusto maiores quos, harum rem fugiat quisquam pariatur
+          explicabo officiis reprehenderit obcaecati!
+        </p>
+
+        <img class="icon my-3" src="/img/icons/benefit.svg" alt="benefit" />
+        <p>
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nam
+          consequatur architecto est in alias labore cumque necessitatibus
+          eveniet iusto maiores quos, harum rem fugiat quisquam pariatur
+          explicabo officiis reprehenderit obcaecati!
+        </p>
+      </div>
+      <div class="col-md-4 flex-item text-center">
+        <img class="phone" src="/img/phone.png" alt="cell phone" />
+      </div>
+      <div class="col-md-4 flex-item text-center">
+        <img class="icon my-3" src="/img/icons/time.svg" alt="time" />
+        <p>
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nam
+          consequatur architecto est in alias labore cumque necessitatibus
+          eveniet iusto maiores quos, harum rem fugiat quisquam pariatur
+          explicabo officiis reprehenderit obcaecati!
+        </p>
+
+        <img
+          class="icon my-3"
+          src="/img/icons/complete_proj.svg"
+          alt="complete project"
+        />
+        <p>
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nam
+          consequatur architecto est in alias labore cumque necessitatibus
+          eveniet iusto maiores quos, harum rem fugiat quisquam pariatur
+          explicabo officiis reprehenderit obcaecati!
+        </p>
+      </div>
+    </div>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut magnam impedit
+      labore vero quas quo?
+    </p>
+  </div>
+</div>
+
+<div class="story">
+  <div class="container">
+    <h2 class="text-center blue mb-4"><u>Our Story</u></h2>
+    <p class="story-info">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto omnis
+      consectetur illum aliquid veniam suscipit magnam. Iure, ut! Facilis
+      laboriosam ad accusamus aspernatur, laudantium laborum alias veniam
+      quibusdam vel pariatur sit omnis nesciunt dolores eligendi sunt magnam
+      veritatis ipsam delectus cum. Assumenda reiciendis eum alias quas
+      consequatur. Tenetur, sapiente quos!
+    </p>
+  </div>
+</div>
+
+<div class="faq">
+  <div class="container">
+    <h2 class="text-left black mb-4"><u>Frequently Asked Questions</u></h2>
+    <div id="accordion">
+      <div class="card">
+        <div class="card-header" id="headingOne">
+          <h5 class="mb-0">
+            <button
+              class="btn btn-link collapsed"
+              data-toggle="collapse"
+              data-target="#collapseOne"
+              aria-expanded="false"
+              aria-controls="collapseOne"
+            >
+              <h4 class="black light-weight"></a><i class="indicator glyphicon glyphicon-chevron-down  pull-right"></i>When Does the Program Start?</h4>
+            </button>
+          </h5>
+        </div>
+        <div
+          id="collapseOne"
+          class="collapse"
+          aria-labelledby="headingOne"
+          data-parent="#accordion"
+        >
+          <div class="card-body">
+            <ul>
+              <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+              <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+              <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-header" id="headingTwo">
+          <h5 class="mb-0">
+            <button
+              class="btn btn-link collapsed"
+              data-toggle="collapse"
+              data-target="#collapseTwo"
+              aria-expanded="false"
+              aria-controls="collapseTwo"
+            >
+              <h4 class="black light-weight">When Does the Program Start?</h4>
+            </button>
+          </h5>
+        </div>
+        <div
+          id="collapseTwo"
+          class="collapse"
+          aria-labelledby="headingTwo"
+          data-parent="#accordion"
+        >
+          <div class="card-body">
+            <ul>
+              <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+              <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+              <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-header" id="headingThree">
+          <h5 class="mb-0">
+            <button
+              class="btn btn-link collapsed"
+              data-toggle="collapse"
+              data-target="#collapseThree"
+              aria-expanded="false"
+              aria-controls="collapseThree"
+            >
+              <h4 class="black light-weight">When Does the Program Start?</h4>
+            </button>
+          </h5>
+        </div>
+        <div
+          id="collapseThree"
+          class="collapse"
+          aria-labelledby="headingThree"
+          data-parent="#accordion"
+        >
+          <div class="card-body">
+            <ul>
+              <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+              <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+              <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-header" id="headingThree">
+          <h5 class="mb-0">
+            <button
+              class="btn btn-link collapsed"
+              data-toggle="collapse"
+              data-target="#collapseThree"
+              aria-expanded="false"
+              aria-controls="collapseThree"
+            >
+              <h4 class="black light-weight">When Does the Program Start?</h4>
+            </button>
+          </h5>
+        </div>
+        <div
+          id="collapseThree"
+          class="collapse"
+          aria-labelledby="headingThree"
+          data-parent="#accordion"
+        >
+          <div class="card-body">
+            <ul>
+              <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+              <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+              <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-header" id="headingThree">
+          <h5 class="mb-0">
+            <button
+              class="btn btn-link collapsed"
+              data-toggle="collapse"
+              data-target="#collapseThree"
+              aria-expanded="false"
+              aria-controls="collapseThree"
+            >
+              <h4 class="black light-weight">When Does the Program Start?</h4>
+            </button>
+          </h5>
+        </div>
+        <div
+          id="collapseThree"
+          class="collapse"
+          aria-labelledby="headingThree"
+          data-parent="#accordion"
+        >
+          <div class="card-body">
+            <ul>
+              <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+              <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+              <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-header" id="headingThree">
+          <h5 class="mb-0">
+            <button
+              class="btn btn-link collapsed"
+              data-toggle="collapse"
+              data-target="#collapseThree"
+              aria-expanded="false"
+              aria-controls="collapseThree"
+            >
+              <h4 class="black light-weight">When Does the Program Start?</h4>
+            </button>
+          </h5>
+        </div>
+        <div
+          id="collapseThree"
+          class="collapse"
+          aria-labelledby="headingThree"
+          data-parent="#accordion"
+        >
+          <div class="card-body">
+            <ul>
+              <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+              <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+              <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% endblock %}

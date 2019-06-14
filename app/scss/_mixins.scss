@@ -1,0 +1,35 @@
+// Break points
+$color-blue: #38bcdb;
+$color-blue-hover: #2e91a3;
+$color-grey: #a9aaab;
+$color-light-grey: #dcdcdc;
+
+$mobile-only: 768px;
+$tablet: 880px;
+$tablet-landscape: 960px;
+$desktop: 1025px;
+$desktop-wide: 1264px;
+
+@mixin mobile {
+	@media (max-width: #{$mobile-only}) {
+		@content;
+	}
+}
+
+@mixin tablet {
+	@media (min-width: #{$tablet}) {
+		@content;
+	}
+}
+
+@mixin desktop {
+	@media (min-width: #{$desktop}) {
+		@content;
+	}
+}
+
+@mixin desktop-wide {
+	@media (min-width: #{$desktop-wide}) {
+		@content;
+	}
+}
