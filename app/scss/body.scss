@@ -1,7 +1,21 @@
 * {
   font-family: 'Roboto Slab', serif;
+  line-height: 2em
 }
 body {
+  
+  .text-right {
+    @include mobile {
+      text-align: center !important;
+    }
+  }
+  .text-left {
+    @include mobile {
+      text-align: center !important;
+    }
+  }
+
+
   h4 {
     font-family: 'Roboto Slab', sans-serif;
     font-size: 18px;
@@ -16,6 +30,12 @@ body {
     font-size: 58px;
     color: white;
     padding-bottom: 15px;
+
+    @include mobile {
+      font-size: 28px;
+      padding-bottom: 5px;
+      text-align: center;
+    }
   }
   h2 {
     font-family: 'Roboto', sans-serif;
@@ -29,11 +49,26 @@ body {
   }
 }
 
-.nav-info {
-  font-family: 'Roboto Slab', sans-serif;
-  font-size: 18px;
-  color: white;
+.no-border {
+  @include mobile {
+    border-bottom: none !important;
+  }
 }
+
+.line {
+  @include desktop {
+    display: none;
+  }
+  hr {
+    border-top: 2.5px solid $color-blue;
+  }
+}
+.mobile-hide {
+  @include mobile {
+    display: none;
+  }
+}
+
 .hero-info {
   font-family: 'Roboto', sans-serif;
   font-size: 20px;
@@ -67,28 +102,44 @@ header {
   // padding: 10px;
   border-radius: 3px;
 
+  .new-hero {
+    @include mobile {
+      background: url('/img/mobile_imgs/code_mobile_hero.jpg') no-repeat center;
+      // background-size: cover;
+      padding: 60px 0px;
+      margin-bottom: 0px !important;
+    }
+  }
+
   p {
     font-family: 'Roboto', sans-serif;
     font-size: 20px;
     text-align: center;
     color: white;
+    line-height: 1.6em;
   }
 
-  .row {
-    // justify-content: space-between;
-    // display: flex;
+  .no-padding {
+    @include mobile {
+      padding: 0px;
+    }
   }
 
   .hero-form {
     background-color: rgba(255, 255, 255, 0.7);
     padding: 10px;
     border-radius: 3px;
+
+    @include mobile {
+      border-radius: 0px;
+    }
     // width: 33%;
 
     p {
       font-family: 'Roboto', sans-serif;
       font-size: 16px;
       text-align: center;
+      padding-bottom: 10px;
     }
 
     .form-group {
@@ -120,6 +171,10 @@ header {
     font-size: 32px;
     color: white;
 
+    @include mobile {
+      font-size: 24px;
+    }
+
     &:hover {
       background-color: $color-blue-hover;
       border-color: $color-blue-hover;
@@ -132,17 +187,29 @@ header {
     font-size: 32px;
     color: white;
     margin: 0px;
+
+    @include mobile {
+      font-size: 28px;
+    }
   }
 }
 
 .hero {
   padding: 90px 0px 90px 0px;
   // display: flex;
+  @include mobile {
+    padding: 0px 0px 0px 0px;
+  }
 
   form {
     background-color: rgba(255, 255, 255, 0.7);
     padding: 10px;
     border-radius: 3px;
+
+    @include mobile {
+      border-radius: 0px;
+      background-color: white;
+    }
 
     .form-group {
       width: 49.3%;
@@ -160,6 +227,10 @@ header {
         font-size: 22px;
         font-family: 'Roboto', sans-serif;
         text-align: center;
+
+        @include mobile {
+          font-size: 20px;
+        }
       }
     }
 
@@ -171,6 +242,10 @@ header {
       font-weight: 700;
       font-size: 32px;
       color: white;
+
+      @include mobile {
+        font-size: 24px;
+      }
 
       &:hover {
         background-color: $color-blue-hover;
@@ -186,6 +261,11 @@ header {
   width: 100%;
   height: auto;
   padding: 40px 0;
+
+  @include mobile {
+    background: url('/img/mobile_imgs/featuring_mobile.jpg') no-repeat center;
+    background-size: cover;
+  }
 
   p {
     font-family: 'Roboto Slab', sans-serif;
@@ -217,7 +297,11 @@ header {
     }
 
     .phone {
-      height: 400px;
+      width: 100%;
+
+      @include mobile {
+        width: 70%;
+      }
     }
   }
 }
@@ -228,6 +312,13 @@ header {
   width: 100%;
   height: auto;
   padding: 90px 0px;
+
+  @include mobile {
+    padding: 60px 0px;
+    background: url('/img/mobile_imgs/about_mobile.jpg') no-repeat center;
+    background-size: cover;
+    
+  }
 }
 
 .faq {
@@ -235,12 +326,35 @@ header {
   background-size: cover;
   width: 100%;
   height: auto;
-  min-height: 400px;
+  min-height: 500px;
   padding: 40px 0px;
+
+  @include mobile {
+    background: url('/img/mobile_imgs/faq_mobile.jpg') no-repeat center;
+    background-size: cover;
+    min-height: 800px;
+  }
 
   #accordion {
     width: 60%;
     background: transparent;
+
+    i {
+      color: black;
+    }
+
+    .collapsed{
+        i {
+          color: $color-blue;
+          transform: rotate(-90deg);
+        }
+      
+      
+    }
+
+    @include mobile {
+      width: 100%;
+    }
 
     .card-header {
       background: transparent;
@@ -273,6 +387,8 @@ header {
     }
     .btn {
       padding: 0;
+      white-space: normal;
+      text-align: left;
 
       &:hover {
         text-decoration: none;

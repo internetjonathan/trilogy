@@ -1,18 +1,44 @@
 {% extends "layout.html" %} {% block header %}
 
+
 <div class="container">
   <div class="hero">
-    <div class="row mb-5">
+    <div class="row mb-5 new-hero">
       <div class="col-md-4">
         <h1>
           Learn Coding
-          <div class="br"></div>
+          <div class="br mobile-hide"></div>
           in 24 weeks
         </h1>
         <h4 class="text-left">Class Starts May 15, 2018</h4>
       </div>
-      <div class="col-md-4 offset-md-4">
-        <h2 class="text-right blue">CODING</h2>
+
+      <!-- carousel -->
+      <!-- <div id="carouselContent" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner" role="listbox">
+            <div class="carousel-item active text-center p-4">
+                 <p>lorem ipsum (imagine longer text)</p>
+            </div>
+            <div class="carousel-item text-center p-4">
+                
+                <p>lorem ipsum (imagine longer text)</p>
+            </div>
+        </div>
+        <a class="carousel-control-prev" href="#carouselContent" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselContent" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only"></span>
+        </a>
+    </div> -->
+
+      <div class="col-md-4 no-border offset-md-4" style="border-bottom: 3px solid #38bcdb; padding-bottom: 20px;">
+        <h2 class="text-right blue mobile-hide">CODING</h2>
+        <div class="line">
+          <hr>
+        </div>
         <p class="text-right">
           Coding Boot Camp equps students skills for full-stack web development
           through dynamic, in-person classes.
@@ -20,39 +46,31 @@
       </div>
     </div>
     <div class="row margin-top-md">
-      <div class="col-md-5">
+      <div class="col-md-5 no-padding">
         <form class="hero-form">
           <h3 class="text-center black">GET PROGRAM INFO</h3>
-          <p class="black">Step 1 of 3</p>
+          <p class="black my-2">Step 1 of 3</p>
           <div class="form-group">
-            <input
-              type="email"
-              class="form-control"
-              id="exampleInputEmail1"
-              aria-describedby="emailHelp"
-              placeholder="First name"
-            />
+            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+              placeholder="First name" />
           </div>
           <div class="form-group">
-            <input
-              type="password"
-              class="form-control"
-              id="exampleInputPassword1"
-              placeholder="Last name"
-            />
+            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Last name" />
           </div>
-          <button type="submit" class="btn btn-primary ">CONTINUE</button>
+          <button type="submit" class="btn btn-primary">CONTINUE <i class="fas fa-chevron-right"></i></button>
         </form>
       </div>
 
-      <div class="col-md-4 offset-md-3">
+      <div class="col-md-4 my-auto offset-md-3 mobile-hide">
         <h2 class="text-right">Data Analytics</h2>
-        <p class="text-right">
-          Data Boot Camp equips students with the key skills for sull-stack well
+        <p class="text-right" style="border-bottom: 3px solid white; padding-bottom: 20px;">
+          Data Boot Camp equips students with the key skills for full-stack well
           development through dynamic, in-person classes.
         </p>
       </div>
     </div>
+
+
   </div>
 </div>
 
@@ -61,13 +79,9 @@
 <div class="featuring">
   <div class="container">
     <h2 class="text-center"><u>Featuring</u></h2>
-    <div class="content my-5">
+    <div class="content my-4">
       <div class="col-md-4 flex-item text-center">
-        <img
-          class="icon my-3"
-          src="/img/icons/data_coding.svg"
-          alt="data coding"
-        />
+        <img class="icon my-3" src="/img/icons/data_coding.svg" alt="data coding" />
         <p>
           Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nam
           consequatur architecto est in alias labore cumque necessitatibus
@@ -95,11 +109,7 @@
           explicabo officiis reprehenderit obcaecati!
         </p>
 
-        <img
-          class="icon my-3"
-          src="/img/icons/complete_proj.svg"
-          alt="complete project"
-        />
+        <img class="icon my-3" src="/img/icons/complete_proj.svg" alt="complete project" />
         <p>
           Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nam
           consequatur architecto est in alias labore cumque necessitatibus
@@ -136,23 +146,15 @@
       <div class="card">
         <div class="card-header" id="headingOne">
           <h5 class="mb-0">
-            <button
-              class="btn btn-link collapsed"
-              data-toggle="collapse"
-              data-target="#collapseOne"
-              aria-expanded="false"
-              aria-controls="collapseOne"
-            >
-              <h4 class="black light-weight"></a><i class="indicator glyphicon glyphicon-chevron-down  pull-right"></i>When Does the Program Start?</h4>
+            <button id="acc-btn" class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseOne"
+              aria-expanded="false" aria-controls="collapseOne">
+              <h4 class="black light-weight"></a><i id="chev" class="fas fa-chevron-down blue"></i> When Does the
+                Program Start?
+              </h4>
             </button>
           </h5>
         </div>
-        <div
-          id="collapseOne"
-          class="collapse"
-          aria-labelledby="headingOne"
-          data-parent="#accordion"
-        >
+        <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
           <div class="card-body">
             <ul>
               <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
@@ -166,23 +168,15 @@
       <div class="card">
         <div class="card-header" id="headingTwo">
           <h5 class="mb-0">
-            <button
-              class="btn btn-link collapsed"
-              data-toggle="collapse"
-              data-target="#collapseTwo"
-              aria-expanded="false"
-              aria-controls="collapseTwo"
-            >
-              <h4 class="black light-weight">When Does the Program Start?</h4>
+            <button id="acc-btn" class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo"
+              aria-expanded="false" aria-controls="collapseTwo">
+              <h4 class="black light-weight"><i id="chev" class="fas fa-chevron-down blue"></i> Can I keep working
+                while studying
+                at the Trilogy Data Science and Analytics Boot Camp?</h4>
             </button>
           </h5>
         </div>
-        <div
-          id="collapseTwo"
-          class="collapse"
-          aria-labelledby="headingTwo"
-          data-parent="#accordion"
-        >
+        <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
           <div class="card-body">
             <ul>
               <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
@@ -196,23 +190,15 @@
       <div class="card">
         <div class="card-header" id="headingThree">
           <h5 class="mb-0">
-            <button
-              class="btn btn-link collapsed"
-              data-toggle="collapse"
-              data-target="#collapseThree"
-              aria-expanded="false"
-              aria-controls="collapseThree"
-            >
-              <h4 class="black light-weight">When Does the Program Start?</h4>
+            <button id="acc-btn" class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree"
+              aria-expanded="false" aria-controls="collapseThree">
+              <h4 class="black light-weight"><i class="faq-chev fas fa-chevron-down blue"></i> How long does it take
+                to complete
+                the program?</h4>
             </button>
           </h5>
         </div>
-        <div
-          id="collapseThree"
-          class="collapse"
-          aria-labelledby="headingThree"
-          data-parent="#accordion"
-        >
+        <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
           <div class="card-body">
             <ul>
               <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
@@ -224,25 +210,17 @@
       </div>
 
       <div class="card">
-        <div class="card-header" id="headingThree">
+        <div class="card-header" id="headingFour">
           <h5 class="mb-0">
-            <button
-              class="btn btn-link collapsed"
-              data-toggle="collapse"
-              data-target="#collapseThree"
-              aria-expanded="false"
-              aria-controls="collapseThree"
-            >
-              <h4 class="black light-weight">When Does the Program Start?</h4>
+            <button id="acc-btn" class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseFour"
+              aria-expanded="false" aria-controls="collapseFour">
+              <h4 class="black light-weight"><i id="chev" class="fas fa-chevron-down blue"></i> Do you provide career
+                placement
+                support?</h4>
             </button>
           </h5>
         </div>
-        <div
-          id="collapseThree"
-          class="collapse"
-          aria-labelledby="headingThree"
-          data-parent="#accordion"
-        >
+        <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordion">
           <div class="card-body">
             <ul>
               <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
@@ -254,25 +232,17 @@
       </div>
 
       <div class="card">
-        <div class="card-header" id="headingThree">
+        <div class="card-header" id="headingFive">
           <h5 class="mb-0">
-            <button
-              class="btn btn-link collapsed"
-              data-toggle="collapse"
-              data-target="#collapseThree"
-              aria-expanded="false"
-              aria-controls="collapseThree"
-            >
-              <h4 class="black light-weight">When Does the Program Start?</h4>
+            <button id="acc-btn" class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseFive"
+              aria-expanded="false" aria-controls="collapseFive">
+              <h4 class="black light-weight"><i id="chev" class="fas fa-chevron-down blue"></i> Do I need to have
+                previous
+                experience in programming or data analytics before applying?</h4>
             </button>
           </h5>
         </div>
-        <div
-          id="collapseThree"
-          class="collapse"
-          aria-labelledby="headingThree"
-          data-parent="#accordion"
-        >
+        <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#accordion">
           <div class="card-body">
             <ul>
               <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
@@ -284,25 +254,18 @@
       </div>
 
       <div class="card">
-        <div class="card-header" id="headingThree">
+        <div class="card-header" id="headingSix">
           <h5 class="mb-0">
-            <button
-              class="btn btn-link collapsed"
-              data-toggle="collapse"
-              data-target="#collapseThree"
-              aria-expanded="false"
-              aria-controls="collapseThree"
-            >
-              <h4 class="black light-weight">When Does the Program Start?</h4>
+            <button id="acc-btn" class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseSix"
+              aria-expanded="false" aria-controls="collapseSix">
+
+              <h4 class="black light-weight"><i id="chev" class="fas fa-chevron-down blue"></i> What Sets your boot
+                camp apart
+                from others I can join Trilogy</h4>
             </button>
           </h5>
         </div>
-        <div
-          id="collapseThree"
-          class="collapse"
-          aria-labelledby="headingThree"
-          data-parent="#accordion"
-        >
+        <div id="collapseSix" class="collapse" aria-labelledby="headingSix" data-parent="#accordion">
           <div class="card-body">
             <ul>
               <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>

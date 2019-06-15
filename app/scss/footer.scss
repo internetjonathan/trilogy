@@ -1,4 +1,40 @@
 footer {
-	background: $color-blue;
-	height: 100px;
+  background: #99d5e3;
+  height: auto;
+  // flex-direction: row-reverse;
+  padding: 30px 0px;
+  .container {
+    .nav {
+      p {
+        font-family: 'Roboto Slab', sans-serif;
+        font-size: 14px;
+        // text-align: right;
+        color: black;
+        font-weight: 400;
+      }
+
+      .bold {
+        font-weight: 700;
+      }
+
+      
+
+      .nav-info {
+        margin-top: auto;
+        margin-bottom: auto;
+        
+      }
+      .nav-copy {
+        font-family: 'Roboto Slab', sans-serif;
+        font-size: 18px;
+        color: white;
+        display: block;
+      
+        @include mobile {
+          display: inline-block;
+          font-size: 16px;
+        }
+      }
+    }
+  }
 }
