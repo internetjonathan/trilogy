@@ -105,7 +105,7 @@ header {
   .new-hero {
     @include mobile {
       background: url('/img/mobile_imgs/code_mobile_hero.jpg') no-repeat center;
-      // background-size: cover;
+      background-size: cover;
       padding: 60px 0px;
       margin-bottom: 0px !important;
     }
