@@ -5,9 +5,9 @@
   flex-direction: row-reverse;
   padding: 5px 0px;
 
-  // @include mobile {
-  //   padding: 5px 0px;
-  // }
+  @include mobile {
+    background-color: black;
+  }
   .container {
     .row {
       // flex-direction: row-reverse;
