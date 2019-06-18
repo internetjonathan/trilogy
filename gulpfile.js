@@ -8,7 +8,7 @@ const rename = require('gulp-rename');
 const uglify = require('gulp-uglify');
 const cleanCSS = require('gulp-clean-css');
 
-gulp.task('styles', function() {
+gulp.task('styles', function () {
 	return gulp
 		.src('./app/scss/main.scss')
 		.pipe(sass())
@@ -19,11 +19,11 @@ gulp.task('styles', function() {
 		.pipe(browserSync.stream());
 });
 
-gulp.task('imgmove', function() {
+gulp.task('imgmove', function () {
 	return gulp.src('app/img/**/*.*').pipe(gulp.dest('./dist/img'));
 });
 
-gulp.task('scripts', function() {
+gulp.task('scripts', function () {
 	return gulp
 		.src('app/js/**/*.js')
 		.pipe(concat('main.js'))
@@ -32,31 +32,31 @@ gulp.task('scripts', function() {
 		.pipe(gulp.dest('dist/js'));
 });
 
-gulp.task('nunjucks', function() {
+gulp.task('nunjucks', function () {
 	return (gulp
-			.src('app/pages/*.html')
-			// Renders template with nunjucks
-			.pipe(
-				nunjucksRender({
-					path: [ 'app/templates' ]
-				})
-			)
-			// output files in app folder
-			.pipe(gulp.dest('./dist')) );
+		.src('app/pages/*.html')
+		// Renders template with nunjucks
+		.pipe(
+			nunjucksRender({
+				path: ['app/templates']
+			})
+		)
+		// output files in app folder
+		.pipe(gulp.dest('./dist')));
 });
 //gulp server and compiling
-gulp.task('serve', [ 'styles', 'nunjucks', 'imgmove', 'scripts' ], function() {
+gulp.task('serve', function () {
 	browserSync.init({
 		server: {
 			baseDir: './dist'
 		}
 	});
 
-	gulp.watch('./app/scss/*.scss', [ 'styles' ]);
-	gulp.watch('./app/js/*.js', [ 'scripts' ]).on('change', browserSync.reload);
-	gulp.watch('./app/img/*.*', [ 'imgmove' ]).on('change', browserSync.reload);
+	gulp.watch('./app/scss/*.scss', ['styles']);
+	gulp.watch('./app/js/*.js', ['scripts']).on('change', browserSync.reload);
+	gulp.watch('./app/img/*.*', ['imgmove']).on('change', browserSync.reload);
 	// gulp.watch('./app/templates/**/*.html', );
-	gulp.watch('./app/**/*.html', [ 'nunjucks' ]).on('change', browserSync.reload);
+	gulp.watch('./app/**/*.html', ['nunjucks']).on('change', browserSync.reload);
 });
 
-gulp.task('default', [ 'serve' ]);
+gulp.task('default', ['serve', 'styles', 'nunjucks', 'imgmove', 'scripts']);
