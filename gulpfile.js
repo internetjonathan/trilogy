@@ -44,8 +44,8 @@ gulp.task('nunjucks', function () {
 		// output files in app folder
 		.pipe(gulp.dest('./dist')));
 });
-//gulp server
-gulp.task('serve', function () {
+//gulp server and compiling
+gulp.task('serve', ['styles', 'nunjucks', 'imgmove', 'scripts'], function () {
 	browserSync.init({
 		server: {
 			baseDir: './dist'
@@ -59,4 +59,4 @@ gulp.task('serve', function () {
 	gulp.watch('./app/**/*.html', ['nunjucks']).on('change', browserSync.reload);
 });
 
-gulp.task('default', ['serve', 'styles', 'nunjucks', 'imgmove', 'scripts']);
+gulp.task('default', ['serve']);
