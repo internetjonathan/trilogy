@@ -44,7 +44,7 @@ gulp.task('nunjucks', function () {
 		// output files in app folder
 		.pipe(gulp.dest('./dist')));
 });
-//gulp server and compiling
+//gulp server
 gulp.task('serve', function () {
 	browserSync.init({
 		server: {
