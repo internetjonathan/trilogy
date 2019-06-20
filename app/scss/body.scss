@@ -102,6 +102,12 @@ header {
   // padding: 10px;
   border-radius: 3px;
 
+  .container {
+    @include mobile {
+      max-width: 600px;
+    }
+  }
+
   .new-hero {
     @include mobile {
       background: url('/img/mobile_imgs/code_mobile_hero.jpg') no-repeat center;
@@ -320,6 +326,7 @@ header {
     
   }
 }
+
 
 .faq {
   background: url('/img/faq.jpg') no-repeat center;
